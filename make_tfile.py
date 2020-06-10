@@ -9,7 +9,7 @@ counter = 0
 
 for line in sync_lines:
     # 1) ADD "PATH" in the begging  "-tcheck" at the end
-    line = 'PATH ' + line + ' -tcheck\n'
+    line = 'PATH ' + line.strip() + ' -tcheck\n'
 
     # 2) replace [<num>] with _<num>_
     line = line.replace('[', '_')
