@@ -13,18 +13,12 @@ for l in sync_lines:
         # 1) ADD "PATH" in the begging  "-tcheck" at the end
         line = 'PATH ' + line.strip() + ' -tcheck\n'
 
-        # 2) replace [<num>] with _<num>_
+        # 2) replace strings
         line = line.replace('[', '_')
         line = line.replace(']', '_')
-
-        # 3) Replace space with '.'
-        # new_line = ''
-        #for i in range(len(line)):
-        #    if line[i-1:i+1] == '_ ' and line[i:i+2] != ' -':
-        #        counter += 1
-        #        new_line = new_line + '.'
-        #    else:
-        #        new_line = new_line + line[i]
+        line = line.replace('.', '_')
+        line = line.replace('__', '_')
+        line = line.replace('/', '.')
 
         tfile.write(line)
 
