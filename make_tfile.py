@@ -1,4 +1,3 @@
-
 sync_list_file = open('synchronizers.txt', 'r')
 tfile = open('arbel.tfile', 'w')
 sync_lines = sync_list_file.readlines()
@@ -8,7 +7,7 @@ tfile.write('BASENAME dte_board_taa0.dut\n')
 lines_counter = 0
 
 for l in sync_lines:
-    for line in l.split():
+    for line in l.split():  # There are 3 in synchronizer paths in each line
         lines_counter += 1
         # 1) ADD "PATH" in the begging  "-tcheck" at the end
         line = 'PATH ' + line.strip() + ' -tcheck\n'
