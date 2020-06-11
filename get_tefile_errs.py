@@ -7,7 +7,7 @@ out_file = open('tfile_errs.txt', 'w')
 counter = 0
 for line in log_lines:
     if 'TFANOTU' in line:
-        out_file.write(line.split()[6][19:])
+        out_file.write(line.split()[6][19:]+'\n')
         counter += 1
 
 print('Update tfile_errs.txt - total errors: ', counter)
