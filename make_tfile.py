@@ -21,7 +21,7 @@ for l in sync_lines:
 
         tfile.write(line)
 
-print('Totla num of line: ', lines_counter)
+print('Total num of line: ', lines_counter)
 
 tfile.close()
 sync_list_file.close()

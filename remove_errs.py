@@ -12,7 +12,7 @@ for line in cells_file:
         print(line)
         err_nb += 1
     else:
-        outfile.write(line)
+        outfile.write(line+'\n')
         cell_nb += 1
 
-print('Correct cells: {}, Error cells: {}'.format(cell_nb, err_nb))
+print('Correct cells: {}, Error cells: {}\n'.format(cell_nb, err_nb))
