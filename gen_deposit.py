@@ -17,6 +17,7 @@ for line in q_file:
     outfile.write(line)
 
 for line in flops_file:
-    line = line.replace('/', '.')
-    line = 'dut.' + line + '.Q\n'
-    outfile.write(line)
+    line = line.split()  #REmove the cell name from the line
+    line[0] = line[0].replace('/', '.')
+    line[0] = 'dut.' + line[0] + '.Q\n'
+    outfile.write(line[0])
