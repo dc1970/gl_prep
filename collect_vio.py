@@ -17,12 +17,12 @@ if not os.path.isfile(sys.argv[1]):
 log_file = open('run/irun.stat_log', 'r')
 vio_set = set([])
 before_reset = True
-
 for line in log_file:
     if 'Drive strap pins of reset VSB_RESET' in line and before_reset:
         before_reset = False
     else:
-        continue
+        if before_reset:
+            continue
     if 'Scope:' in line and 'gfx_core' not in line:
         line = line.split()[1]
         vio_set.add(line)
