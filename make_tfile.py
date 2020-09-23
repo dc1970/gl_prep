@@ -2,8 +2,8 @@ sync_list_file = open('synchronizers.txt', 'r')
 tfile = open('arbel.tfile', 'w')
 sync_lines = sync_list_file.readlines()
 
-# Remove base path and add it to ech line
-#tfile.write('BASENAME dte_board_taa0.dut\n')
+# Remove base path and add it to ech line ..
+#tfile.write('BASENAME dte_board_taa0.dut\n') ..
 lines_counter = 0
 
 for l in sync_lines:
